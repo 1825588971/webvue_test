@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>mianshi</title>
+    <script src="./jquery-1.12.4.js"></script>
+	<style>
+		li {
+			list-style: none;
+			font-size: 20px;
+			line-height: 35px;
+
+		}
+		ul>li>span:first-child{
+			font-weight: 700;
+
+		}
+		li>span:nth-child(2){
+			font-weight: 700;
+		}
+		ul>li>span{
+			margin: 0 5px;
+		}
+	</style>
+	<script type="text/javascript">
+		json = {"ret":0,"msg":"","citys":[{"PCode":"330127","STID":"58543","PREFECTURE":"杭州","EN_PREFECTURE":"HangZhou","City":"淳安","enCity":"ChunAn","GEOCLON":"119.02","GEOCLAT":"29.600000000000001"},{"PCode":"330111","STID":"58449","PREFECTURE":"杭州","EN_PREFECTURE":"HangZhou","City":"富阳","enCity":"FuYang","GEOCLON":"119.95","GEOCLAT":"30.050000000000001"},{"PCode":"330100","STID":"58457","PREFECTURE":"杭州","EN_PREFECTURE":"HangZhou","City":"杭州","enCity":"HangZhou","GEOCLON":"120.17","GEOCLAT":"30.23"},{"PCode":"330182","STID":"58544","PREFECTURE":"杭州","EN_PREFECTURE":"HangZhou","City":"建德","enCity":"JianDe","GEOCLON":"119.27","GEOCLAT":"29.48"},{"PCode":"330185","STID":"58448","PREFECTURE":"杭州","EN_PREFECTURE":"HangZhou","City":"临安","enCity":"LinAn","GEOCLON":"119.7","GEOCLAT":"30.219999999999999"},{"PCode":"330112","STID":"58444","PREFECTURE":"杭州","EN_PREFECTURE":"HangZhou","City":"临平","enCity":"LinPing","GEOCLON":"120.28","GEOCLAT":"30.420000000000002"},{"PCode":"330122","STID":"58542","PREFECTURE":"杭州","EN_PREFECTURE":"HangZhou","City":"桐庐","enCity":"TongLu","GEOCLON":"119.68000000000001","GEOCLAT":"29.800000000000001"},{"PCode":"330109","STID":"58459","PREFECTURE":"杭州","EN_PREFECTURE":"HangZhou","City":"萧山","enCity":"XiaoShan","GEOCLON":"120.28","GEOCLAT":"30.18"},{"PCode":"330110","STID":"58444","PREFECTURE":"杭州","EN_PREFECTURE":"HangZhou","City":"余杭","enCity":"YuHang","GEOCLON":"120.28","GEOCLAT":"30.420000000000002"},{"PCode":"330523","STID":"58446","PREFECTURE":"湖州","EN_PREFECTURE":"HuZhou","City":"安吉","enCity":"AnJi","GEOCLON":"119.7","GEOCLAT":"30.629999999999999"},{"PCode":"330522","STID":"58443","PREFECTURE":"湖州","EN_PREFECTURE":"HuZhou","City":"长兴","enCity":"ChangXing","GEOCLON":"119.90000000000001","GEOCLAT":"31.02"},{"PCode":"330521","STID":"58454","PREFECTURE":"湖州","EN_PREFECTURE":"HuZhou","City":"德清","enCity":"DeQing","GEOCLON":"119.98","GEOCLAT":"30.530000000000001"},{"PCode":"330500","STID":"58450","PREFECTURE":"湖州","EN_PREFECTURE":"HuZhou","City":"湖州","enCity":"HuZhou","GEOCLON":"120.05","GEOCLAT":"30.870000000000001"},{"PCode":"330481","STID":"58455","PREFECTURE":"嘉兴","EN_PREFECTURE":"JiaXing","City":"海宁","enCity":"HaiNing","GEOCLON":"120.5","GEOCLAT":"30.48"},{"PCode":"330424","STID":"58458","PREFECTURE":"嘉兴","EN_PREFECTURE":"JiaXing","City":"海盐","enCity":"HaiYan","GEOCLON":"120.90000000000001","GEOCLAT":"30.530000000000001"},{"PCode":"330421","STID":"58451","PREFECTURE":"嘉兴","EN_PREFECTURE":"JiaXing","City":"嘉善","enCity":"JiaShan","GEOCLON":"120.93000000000001","GEOCLAT":"30.829999999999998"},{"PCode":"330400","STID":"58452","PREFECTURE":"嘉兴","EN_PREFECTURE":"JiaXing","City":"嘉兴","enCity":"JiaXing","GEOCLON":"120.77","GEOCLAT":"30.73"},{"PCode":"330482","STID":"58464","PREFECTURE":"嘉兴","EN_PREFECTURE":"JiaXing","City":"平湖","enCity":"PingHu","GEOCLON":"121.12","GEOCLAT":"30.649999999999999"},{"PCode":"330483","STID":"58456","PREFECTURE":"嘉兴","EN_PREFECTURE":"JiaXing","City":"桐乡","enCity":"TongXiang","GEOCLON":"120.52","GEOCLAT":"30.629999999999999"},{"PCode":"330783","STID":"58558","PREFECTURE":"金华","EN_PREFECTURE":"JinHua","City":"东阳","enCity":"DongYang","GEOCLON":"120.22","GEOCLAT":"29.27"},{"PCode":"330700","STID":"58549","PREFECTURE":"金华","EN_PREFECTURE":"JinHua","City":"金华","enCity":"JinHua","GEOCLON":"119.65000000000001","GEOCLAT":"29.120000000000001"},{"PCode":"330781","STID":"58548","PREFECTURE":"金华","EN_PREFECTURE":"JinHua","City":"兰溪","enCity":"LanXi","GEOCLON":"119.47","GEOCLAT":"29.219999999999999"},{"PCode":"330727","STID":"58560","PREFECTURE":"金华","EN_PREFECTURE":"JinHua","City":"磐安","enCity":"PanAn","GEOCLON":"120.43000000000001","GEOCLAT":"29.050000000000001"},{"PCode":"330726","STID":"58546","PREFECTURE":"金华","EN_PREFECTURE":"JinHua","City":"浦江","enCity":"PuJiang","GEOCLON":"119.88","GEOCLAT":"29.469999999999999"},{"PCode":"330723","STID":"58642","PREFECTURE":"金华","EN_PREFECTURE":"JinHua","City":"武义","enCity":"WuYi","GEOCLON":"119.8","GEOCLAT":"28.879999999999999"},{"PCode":"330782","STID":"58557","PREFECTURE":"金华","EN_PREFECTURE":"JinHua","City":"义乌","enCity":"YiWu","GEOCLON":"120.08","GEOCLAT":"29.329999999999998"},{"PCode":"330784","STID":"58643","PREFECTURE":"金华","EN_PREFECTURE":"JinHua","City":"永康","enCity":"YongKang","GEOCLON":"120.03","GEOCLAT":"28.899999999999999"},{"PCode":"331122","STID":"58654","PREFECTURE":"丽水","EN_PREFECTURE":"LiShui","City":"缙云","enCity":"JingYun","GEOCLON":"120.08","GEOCLAT":"28.670000000000002"},{"PCode":"331127","STID":"58648","PREFECTURE":"丽水","EN_PREFECTURE":"LiShui","City":"景宁","enCity":"JinNing","GEOCLON":"119.64","GEOCLAT":"27.989999999999998"},{"PCode":"331100","STID":"58646","PREFECTURE":"丽水","EN_PREFECTURE":"LiShui","City":"丽水","enCity":"LiShui","GEOCLON":"119.92","GEOCLAT":"28.449999999999999"},{"PCode":"331181","STID":"58647","PREFECTURE":"丽水","EN_PREFECTURE":"LiShui","City":"龙泉","enCity":"LiShui","GEOCLON":"119.13","GEOCLAT":"28.07"},{"PCode":"331121","STID":"58657","PREFECTURE":"丽水","EN_PREFECTURE":"LiShui","City":"青田","enCity":"QingTian","GEOCLON":"120.28","GEOCLAT":"28.149999999999999"},{"PCode":"331126","STID":"58745","PREFECTURE":"丽水","EN_PREFECTURE":"LiShui","City":"庆元","enCity":"QingYuan","GEOCLON":"119.08","GEOCLAT":"27.620000000000001"},{"PCode":"331124","STID":"58645","PREFECTURE":"丽水","EN_PREFECTURE":"LiShui","City":"松阳","enCity":"SongYang","GEOCLON":"119.48","GEOCLAT":"28.43"},{"PCode":"331123","STID":"58644","PREFECTURE":"丽水","EN_PREFECTURE":"LiShui","City":"遂昌","enCity":"SuiChang","GEOCLON":"119.28","GEOCLAT":"28.600000000000001"},{"PCode":"331125","STID":"58742","PREFECTURE":"丽水","EN_PREFECTURE":"LiShui","City":"云和","enCity":"YunHe","GEOCLON":"119.55","GEOCLAT":"28.120000000000001"},{"PCode":"330206","STID":"58563","PREFECTURE":"宁波","EN_PREFECTURE":"NingBo","City":"北仑","enCity":"BeiLun","GEOCLON":"121.83","GEOCLAT":"29.879999999999999"},{"PCode":"330282","STID":"58467","PREFECTURE":"宁波","EN_PREFECTURE":"NingBo","City":"慈溪","enCity":"CiXi","GEOCLON":"121.27","GEOCLAT":"30.199999999999999"},{"PCode":"330283","STID":"58565","PREFECTURE":"宁波","EN_PREFECTURE":"NingBo","City":"奉化","enCity":"FengHua","GEOCLON":"121.39","GEOCLAT":"29.690000000000001"},{"PCode":"330200","STID":"58562","PREFECTURE":"宁波","EN_PREFECTURE":"NingBo","City":"宁波","enCity":"NingBo","GEOCLON":"121.5","GEOCLAT":"29.800000000000001"},{"PCode":"330226","STID":"58567","PREFECTURE":"宁波","EN_PREFECTURE":"NingBo","City":"宁海","enCity":"NingHai","GEOCLON":"121.43000000000001","GEOCLAT":"29.32"},{"PCode":"330225","STID":"58566","PREFECTURE":"宁波","EN_PREFECTURE":"NingBo","City":"象山","enCity":"XiangShan","GEOCLON":"121.88","GEOCLAT":"29.469999999999999"},{"PCode":"330212","STID":"58562","PREFECTURE":"宁波","EN_PREFECTURE":"NingBo","City":"鄞州","enCity":"YinZhou","GEOCLON":"121.5","GEOCLAT":"29.800000000000001"},{"PCode":"330281","STID":"58468","PREFECTURE":"宁波","EN_PREFECTURE":"NingBo","City":"余姚","enCity":"YuYao","GEOCLON":"121.13","GEOCLAT":"30.02"},{"PCode":"330211","STID":"58561","PREFECTURE":"宁波","EN_PREFECTURE":"NingBo","City":"镇海","enCity":"ZhenHai","GEOCLON":"121.59999999999999","GEOCLAT":"29.98"},{"PCode":"330822","STID":"58631","PREFECTURE":"衢州","EN_PREFECTURE":"QuZhou","City":"常山","enCity":"ChangShan","GEOCLON":"118.5","GEOCLAT":"28.899999999999999"},{"PCode":"330881","STID":"58632","PREFECTURE":"衢州","EN_PREFECTURE":"QuZhou","City":"江山","enCity":"JiangShan","GEOCLON":"118.59999999999999","GEOCLAT":"28.719999999999999"},{"PCode":"330824","STID":"58537","PREFECTURE":"衢州","EN_PREFECTURE":"QuZhou","City":"开化","enCity":"KaiHua","GEOCLON":"118.40000000000001","GEOCLAT":"29.129999999999999"},{"PCode":"330825","STID":"58547","PREFECTURE":"衢州","EN_PREFECTURE":"QuZhou","City":"龙游","enCity":"QuZhou","GEOCLON":"119.18000000000001","GEOCLAT":"29.030000000000001"},{"PCode":"330800","STID":"58633","PREFECTURE":"衢州","EN_PREFECTURE":"QuZhou","City":"衢州","enCity":"QuZhou","GEOCLON":"118.90000000000001","GEOCLAT":"29.0"},{"PCode":"330603","STID":"58453","PREFECTURE":"绍兴","EN_PREFECTURE":"ShaoXing","City":"柯桥","enCity":"KeQiao","GEOCLON":"120.5","GEOCLAT":"30.07"},{"PCode":"330604","STID":"58553","PREFECTURE":"绍兴","EN_PREFECTURE":"ShaoXing","City":"上虞","enCity":"ShangYu","GEOCLON":"120.81999999999999","GEOCLAT":"30.050000000000001"},{"PCode":"330600","STID":"K4026","PREFECTURE":"绍兴","EN_PREFECTURE":"ShaoXing","City":"绍兴","enCity":"ShaoXing","GEOCLON":"120.633331298828","GEOCLAT":"30.0"},{"PCode":"330683","STID":"58556","PREFECTURE":"绍兴","EN_PREFECTURE":"ShaoXing","City":"嵊州","enCity":"ShengZhou","GEOCLON":"120.81999999999999","GEOCLAT":"29.600000000000001"},{"PCode":"330624","STID":"58555","PREFECTURE":"绍兴","EN_PREFECTURE":"ShaoXing","City":"新昌","enCity":"XinChang","GEOCLON":"120.88","GEOCLAT":"29.52"},{"PCode":"330681","STID":"58550","PREFECTURE":"绍兴","EN_PREFECTURE":"ShaoXing","City":"诸暨","enCity":"ZhuJi","GEOCLON":"120.25","GEOCLAT":"29.699999999999999"},{"PCode":"331003","STID":"K8201","PREFECTURE":"台州","EN_PREFECTURE":"TaiZhou","City":"黄岩","enCity":"HuangYan","GEOCLON":"121.25722503662099","GEOCLAT":"28.6694450378418"},{"PCode":"331002","STID":"58665","PREFECTURE":"台州","EN_PREFECTURE":"TaiZhou","City":"椒江","enCity":"JiaoJiang","GEOCLON":"121.42","GEOCLAT":"28.620000000000001"},{"PCode":"331082","STID":"58660","PREFECTURE":"台州","EN_PREFECTURE":"TaiZhou","City":"临海","enCity":"TaiZhou","GEOCLON":"121.13","GEOCLAT":"28.850000000000001"},{"PCode":"331004","STID":"K8301","PREFECTURE":"台州","EN_PREFECTURE":"TaiZhou","City":"路桥","enCity":"LuQiao","GEOCLON":"121.35028076171901","GEOCLAT":"28.5833339691162"},{"PCode":"331022","STID":"58568","PREFECTURE":"台州","EN_PREFECTURE":"TaiZhou","City":"三门","enCity":"ShanMen","GEOCLON":"121.38","GEOCLAT":"29.120000000000001"},{"PCode":"331000","STID":"58665","PREFECTURE":"台州","EN_PREFECTURE":"TaiZhou","City":"台州","enCity":"TaiZhou","GEOCLON":"121.42","GEOCLAT":"28.620000000000001"},{"PCode":"331023","STID":"58559","PREFECTURE":"台州","EN_PREFECTURE":"TaiZhou","City":"天台","enCity":"TianTai","GEOCLON":"120.97","GEOCLAT":"29.149999999999999"},{"PCode":"331081","STID":"58664","PREFECTURE":"台州","EN_PREFECTURE":"TaiZhou","City":"温岭","enCity":"WenLing","GEOCLON":"121.37","GEOCLAT":"28.370000000000001"},{"PCode":"331024","STID":"58652","PREFECTURE":"台州","EN_PREFECTURE":"TaiZhou","City":"仙居","enCity":"XianJu","GEOCLON":"120.72","GEOCLAT":"28.859999999999999"},{"PCode":"331021","STID":"58667","PREFECTURE":"台州","EN_PREFECTURE":"TaiZhou","City":"玉环","enCity":"YuHuan","GEOCLON":"121.27","GEOCLAT":"28.079999999999998"},{"PCode":"330327","STID":"58755","PREFECTURE":"温州","EN_PREFECTURE":"WenZhou","City":"苍南","enCity":"CangNan","GEOCLON":"120.38","GEOCLAT":"27.5"},{"PCode":"330305","STID":"58760","PREFECTURE":"温州","EN_PREFECTURE":"WenZhou","City":"洞头","enCity":"DongTou","GEOCLON":"121.15000000000001","GEOCLAT":"27.829999999999998"},{"PCode":"330382","STID":"58656","PREFECTURE":"温州","EN_PREFECTURE":"WenZhou","City":"乐清","enCity":"YueQing","GEOCLON":"120.97","GEOCLAT":"28.120000000000001"},{"PCode":"330326","STID":"58751","PREFECTURE":"温州","EN_PREFECTURE":"WenZhou","City":"平阳","enCity":"PingYang","GEOCLON":"120.55","GEOCLAT":"27.68"},{"PCode":"330381","STID":"58752","PREFECTURE":"温州","EN_PREFECTURE":"WenZhou","City":"瑞安","enCity":"RuiAn","GEOCLON":"120.65000000000001","GEOCLAT":"27.780000000000001"},{"PCode":"330329","STID":"58746","PREFECTURE":"温州","EN_PREFECTURE":"WenZhou","City":"泰顺","enCity":"TaiShun","GEOCLON":"119.7","GEOCLAT":"27.550000000000001"},{"PCode":"330300","STID":"58659","PREFECTURE":"温州","EN_PREFECTURE":"WenZhou","City":"温州","enCity":"WenZhou","GEOCLON":"120.65000000000001","GEOCLAT":"28.030000000000001"},{"PCode":"330328","STID":"58750","PREFECTURE":"温州","EN_PREFECTURE":"WenZhou","City":"文成","enCity":"WenCheng","GEOCLON":"120.08","GEOCLAT":"27.780000000000001"},{"PCode":"330324","STID":"58658","PREFECTURE":"温州","EN_PREFECTURE":"WenZhou","City":"永嘉","enCity":"YongJia","GEOCLON":"120.68000000000001","GEOCLAT":"28.149999999999999"},{"PCode":"330921","STID":"58484","PREFECTURE":"舟山","EN_PREFECTURE":"ZhouShan","City":"岱山","enCity":"DaiShan","GEOCLON":"122.2","GEOCLAT":"30.25"},{"PCode":"330903","STID":"58570","PREFECTURE":"舟山","EN_PREFECTURE":"ZhouShan","City":"普陀","enCity":"PuTuo","GEOCLON":"122.3","GEOCLAT":"29.949999999999999"},{"PCode":"330922","STID":"58472","PREFECTURE":"舟山","EN_PREFECTURE":"ZhouShan","City":"嵊泗","enCity":"ShengSi","GEOCLON":"122.45","GEOCLAT":"30.73"},{"PCode":"330900","STID":"58477","PREFECTURE":"舟山","EN_PREFECTURE":"ZhouShan","City":"舟山","enCity":"ZhouShan","GEOCLON":"122.11","GEOCLAT":"30.030000000000001"}],"users":[{"uid":"1","name":"ECMWF DMO"},{"uid":"3","name":"GFS DMO"},{"uid":"21","name":"中央台格点指导"},{"uid":"40","name":"省台客观格点报"},{"uid":"61","name":"省台格点订正"},{"uid":"62","name":"市台格点订正"},{"uid":"70","name":"GFE-BLEND"},{"uid":"72","name":"融合产品"},{"uid":"101","name":"OCFv3"}]}
+		console.log(json['citys'])
+	</script>
+</head>
+<body>
+	<div>
+		<ul class="" id="city">
+			<li class="" style="font-weight: 700;margin-left: 5px;">浙江</li>
+			<!-- <li>
+				<span>杭州</span>
+				<span>-</span>
+				<span>淳安</span>
+				<span>富阳</span>
+				<span>建德</span>
+			</li> -->
+		</ul>
+	</div>
+</body>
+<script>
+	var cityData = json['citys'];
+		ctdata(cityData);
+		function ctdata(cityData) {
+			let cache = {};
+			let indices = [];
+			cityData.map((item, index) => {
+				let types = item.PREFECTURE;
+				let city = item.City
+				let _index = cache[types];
+				//console.log([types])
+				if (_index !== undefined) {
+					indices[_index].push(city);
+				} else {
+					cache[types] = indices.length;
+					indices.push([types, '-', city]);
+				}
+			})
+			indices.map((item) => {
+				let arrHtml = "";
+				item.map((index) => {
+					arrHtml += '<span>' + index + '</span>';
+				})
+				arrHtml = '<li>' + arrHtml + '</li>'
+				$("#city").append(arrHtml);
+			})
+		}
+</script>
+</html>
